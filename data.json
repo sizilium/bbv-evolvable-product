@@ -1,68 +1,50 @@
 {
   "id": "Evolvable Product",
-  "children": [
-    {
+  "children": [{
       "id": "Stakeholder Management",
-      "children": [
-        { "id": "Logistic regression" },
-        { "id": "Linear discriminant analysis" },
-        { "id": "Rules" },
-        { "id": "Decision trees" },
-        { "id": "Naive Bayes" },
-        { "id": "K nearest neighbor" },
-        { "id": "Probabilistic neural network" },
-        { "id": "Support vector machine" }
+      "children": [{
+          "id": "Product Vision"
+        }
       ]
-    },
-    {
+    }, {
       "id": "Evolvable Architecture",
-      "children": [
-        {
-          "id": "Models diversity",
+      "children": [{
+          "id": "Decomposition / Composition",
           "children": [
-            { "id": "Different initializations" },
-            { "id": "Different parameter choices" },
-            { "id": "Different architectures" },
-            { "id": "Different modeling methods" },
-            { "id": "Different training sets" },
-            { "id": "Different feature sets" }
           ]
-        },
-        {
-          "id": "Methods",
+        }, {
+          "id": "Clean Architecture",
           "children": [
-            { "id": "Classifier selection" },
-            { "id": "Classifier fusion" }
           ]
-        },
-        {
-          "id": "Common",
+        }, {
+          "id": "Feature Toggles",
           "children": [
-            { "id": "Bagging" },
-            { "id": "Boosting" },
-            { "id": "AdaBoost" }
           ]
         }
       ]
-    },
-    {
+    }, {
       "id": "Continuous Delivery",
-      "children": [
-        { "id": "Multiple linear regression" },
-        { "id": "Partial least squares" },
-        { "id": "Multi-layer feedforward neural network" },
-        { "id": "General regression neural network" },
-        { "id": "Support vector regression" }
+      "children": [{
+          "id": "System Monitoring"
+        }, {
+          "id": "Flow"
+        }, {
+          "id": "Early Feedback"
+        }, {
+          "id": "DevOps"
+        }, {
+          "id": "Sustainable Pace"
+        }
       ]
-    },
-	 {
+    }, {
       "id": "Validation",
-      "children": [
-        { "id": "Multiple linear regression" },
-        { "id": "Partial least squares" },
-        { "id": "Multi-layer feedforward neural network" },
-        { "id": "General regression neural network" },
-        { "id": "Support vector regression" }
+      "children": [{
+          "id": "Business Value"
+        }, {
+          "id": "User Acceptance"
+        }, {
+          "id": "User Research"
+        }
       ]
     }
   ]
