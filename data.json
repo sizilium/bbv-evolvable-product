@@ -3,13 +3,27 @@
   "children": [{
       "id": "Stakeholder Management",
       "children": [{
-          "id": "Product Vision"
+          "id": "Product Vision",
+          "children": [{
+              "id": "Product Lifecycle"
+            }, {
+              "id": "Problem Understanding"
+            }
+          ]
         }
       ]
     }, {
       "id": "Evolvable Architecture",
       "children": [{
-          "id": "Decomposition / Composition"
+          "id": "Decomposition / Composition",
+          "children": [{
+              "id": "Service Boundaries"
+            }, {
+              "id": "Clean Code"
+            }, {
+              "id": "Split + Defer Decisions"
+            }
+          ]
         }, {
           "id": "Clean Architecture"
         }, {
