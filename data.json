@@ -9,17 +9,11 @@
     }, {
       "id": "Evolvable Architecture",
       "children": [{
-          "id": "Decomposition / Composition",
-          "children": [
-          ]
+          "id": "Decomposition / Composition"
         }, {
-          "id": "Clean Architecture",
-          "children": [
-          ]
+          "id": "Clean Architecture"
         }, {
-          "id": "Feature Toggles",
-          "children": [
-          ]
+          "id": "Feature Toggles"
         }
       ]
     }, {
