@@ -33,21 +33,69 @@
     }, {
       "id": "Continuous Delivery",
       "children": [{
-          "id": "System Monitoring"
+          "id": "System Monitoring",
+          "children": [{
+              "id": "Metrics"
+            }
+          ]
         }, {
-          "id": "Flow"
-        }, {
-          "id": "Early Feedback"
+          "id": "Flow",
+          "children": [{
+              "id": "Pull System"
+            }, {
+              "id": "Slicing"
+            }, {
+              "id": "Minimize WIP"
+            }, {
+              "id": "Continuous Improvement"
+            }, {
+              "id": "Zero-Bug-Policy"
+            }, {
+              "id": "Automation"
+            }
+          ]
         }, {
           "id": "DevOps"
         }, {
           "id": "Sustainable Pace"
+        }, {
+          "id": "Early Feedback",
+          "children": [{
+              "id": "High Cadence",
+              "children": [{
+                  "id": "Quality Assurance"
+                }
+              ]
+            }, {
+              "id": "Prototyping"
+            }, {
+              "id": "Direct Market Access"
+            }
+          ]
         }
       ]
     }, {
       "id": "Validation",
       "children": [{
           "id": "Business Value"
+        }, {
+          "id": "Direct Market Access"
+        }, {
+          "id": "Hypothesis Driven Development",
+          "children": [{
+              "id": "Doing trumps Talking"
+            }, {
+              "id": "Thinking in evolutionary Steps",
+              "children": [{
+                  "id": "Iterative & Incremental",
+                  "children": [{
+                      "id": "Safe Points"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }, {
           "id": "User Acceptance"
         }, {
