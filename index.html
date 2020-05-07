@@ -1,90 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Evolvable Product</title>
-  </head>
-  <body>
-    <h1>Evolvable Product</h1>
-    
-    <div id="container"></div>
+---
+layout: default
+---
 
-    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.4.8/dist/g6.min.js"></script>
+<h1>Evolvable Product</h1>
 
-    <script>
-      fetch('https://raw.githubusercontent.com/sizilium/evolvable-product/master/data.json')
-      .then(res => res.json())
-      .then(data => {
-        const width = document.getElementById('container').scrollWidth;
-        const height = document.getElementById('container').scrollHeight || 500;
-        const graph = new G6.TreeGraph({
-          container: 'container',
-          width,
-          height,
-          linkCenter: true,
-          modes: {
-            default: [
-              {
-                type: 'collapse-expand',
-                onChange: function onChange(item, collapsed) {
-                  const data = item.get('model').data;
-                  data.collapsed = collapsed;
-                  return true;
-                },
-              },
-              'drag-canvas',
-              'zoom-canvas',
-            ],
-          },
-          defaultNode: {
-            size: 20,
-            anchorPoints: [
-              [0, 0.5],
-              [1, 0.5],
-            ],
-            style: {
-              fill: '#C6E5FF',
-              stroke: '#5B8FF9',
+<div id="container"></div>
+
+<script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.4.8/dist/g6.min.js"></script>
+
+<script>
+  fetch('https://raw.githubusercontent.com/sizilium/evolvable-product/master/data.json')
+  .then(res => res.json())
+  .then(data => {
+    const width = document.getElementById('container').scrollWidth;
+    const height = document.getElementById('container').scrollHeight || 500;
+    const graph = new G6.TreeGraph({
+      container: 'container',
+      width,
+      height,
+      linkCenter: true,
+      modes: {
+        default: [
+          {
+            type: 'collapse-expand',
+            onChange: function onChange(item, collapsed) {
+              const data = item.get('model').data;
+              data.collapsed = collapsed;
+              return true;
             },
           },
-          defaultEdge: {
-            type: 'cubic-vertical',
-            style: {
-              stroke: '#A3B1BF',
-            },
-          },
-          layout: {
-            type: 'dendrogram',
-            direction: 'TB', // H / V / LR / RL / TB / BT
-            nodeSep: 80,
-            rankSep: 100,
-          },
-        });
+          'drag-canvas',
+          'zoom-canvas',
+        ],
+      },
+      defaultNode: {
+        size: 20,
+        anchorPoints: [
+          [0, 0.5],
+          [1, 0.5],
+        ],
+        style: {
+          fill: '#C6E5FF',
+          stroke: '#5B8FF9',
+        },
+      },
+      defaultEdge: {
+        type: 'cubic-vertical',
+        style: {
+          stroke: '#A3B1BF',
+        },
+      },
+      layout: {
+        type: 'dendrogram',
+        direction: 'TB', // H / V / LR / RL / TB / BT
+        nodeSep: 80,
+        rankSep: 100,
+      },
+    });
 
-        graph.node(function(node) {
-          let position = 'right';
-          let rotate = 0;
-          if (!node.children) {
-            position = 'bottom';
-            rotate = Math.PI / 2;
-          }
-          return {
-            label: node.id,
-            labelCfg: {
-              position,
-              offset: 5,
-              style: {
-                rotate,
-                textAlign: 'start',
-              },
-            },
-          };
-        });
+    graph.node(function(node) {
+      let position = 'right';
+      let rotate = 0;
+      if (!node.children) {
+        position = 'bottom';
+        rotate = Math.PI / 2;
+      }
+      return {
+        label: node.id,
+        labelCfg: {
+          position,
+          offset: 5,
+          style: {
+            rotate,
+            textAlign: 'start',
+          },
+        },
+      };
+    });
 
-        graph.data(data);
-        graph.render();
-        graph.fitView();
-      });
-    </script>
-  </body>
-</html>
+    graph.data(data);
+    graph.render();
+    graph.fitView();
+  });
+</script>
